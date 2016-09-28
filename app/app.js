@@ -1,37 +1,13 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
+import oclazyload from 'oclazyload';
 
-import routes from './app.config';
-import home from './pages/home';
+import config from './app.config';
+import homeRoutes from './pages/home/home.routes';
 
 angular.module('app', [
   uirouter,
-  home
-]).config(routes);
-
-// function homeRouting($urlRouterProvider, $stateProvider) {
-//   $urlRouterProvider.otherwise('/home');
-
-//   $stateProvider
-//     .state('home', {
-//       url: '/home',
-//       template: require('./views/home.html'),
-//       controller: 'HomeController as vm',
-//       resolve: {
-//         loadHomeController: ($q, $ocLazyLoad) => {
-//           return $q((resolve) => {
-//             require.ensure([], () => {
-//               // load whole module
-//               let module = require('./home');
-//               $ocLazyLoad.load({name: 'home'});
-//               resolve(module.controller);
-//             });
-//           });
-//         }
-//       }
-//     }).state('home.about', {
-//       url: '/about',
-//       template: require('./views/home.about.html'),
-//       controller: 'HomeAboutController as vm',
-//     });
-// }
+  oclazyload,
+  homeRoutes.name
+])
+.config(config);
