@@ -1,3 +1,5 @@
+import angular from 'angular';
+
 class HomeController {
 	constructor () {
 		this.name = 'home';
@@ -8,4 +10,6 @@ class HomeController {
 	}
 }
 
-export default HomeController;
+export default angular
+  .module('app.home.controller', [])
+  .controller('HomeController', HomeController);
