@@ -3,6 +3,12 @@ var path = require('path');
 var app = express();
 
 var port = 8080;
+
+app.get('/', function (req, res) {
+	console.log('/: send build index.html');
+	res.sendFile(__dirname + '/app/dist/index.html');
+});
+
 app.use(express.static('./app'));
 
 app.get('*', function (req, res) {

@@ -3,7 +3,7 @@ import angular from 'angular';
 class AboutController {
 	constructor () {
 		this.name = 'about';
-		this.info = 'home 是登录后的首页';
+		this.info = 'home 是主页面';
 	}
 }
 

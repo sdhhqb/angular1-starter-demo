@@ -2,28 +2,19 @@
 	margin: 0;
 	padding: 0;
 }
-a.active {
-	font-weight: bold;
-}
 .home {
 	position: relative;
 }
-.home .title {
-	height: 50px;
-	line-height: 50px;
-	font-size: 36px;
-}
 .home .icons {
-	margin-top: 30px;
+	padding-top: 30px;
 	text-align: center;
 }
 .home .icon {
 	display: inline-block;
-	height: 50px;
 	line-height: 50px;
 	padding: 0 20px;
 	border: solid 1px #333;
-	margin: 0 30px;
+	margin: 10px 30px 0;
 }
 .home .about {
 	position: absolute;

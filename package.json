@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --content-base ./app --port 8082 --history-api-fallback",
-    "build": "cross-env NODE_ENV=production webpack"
+    "build": "cross-env NODE_ENV=production webpack",
+    "clear": "if exist app\\dist\\js rd /s/q app\\dist\\js"
   },
   "author": "",
   "license": "ISC",
@@ -16,10 +17,16 @@
     "babel-core": "^6.14.0",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.14.0",
+    "bootstrap": "^3.3.7",
     "cross-env": "^3.0.0",
+    "css-loader": "^0.25.0",
     "express": "^4.14.0",
+    "file-loader": "^0.9.0",
     "html-loader": "^0.4.4",
     "html-webpack-plugin": "^2.22.0",
+    "jquery": "^3.1.1",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
     "webpack": "^1.13.2",
     "webpack-dev-server": "^1.16.1"
   }

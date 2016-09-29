@@ -1,14 +1,20 @@
 import angular from 'angular';
 
 class ScoreController {
-	constructor () {
+	constructor ($http) {
 		this.name = 'score';
-	}
+		this.scores = [];
+		this.httpServer = $http;
 
-	changeName () {
-		this.name = 'angular trip';
+		var self = this;
+		$http.get('json/scorelist.json').then(function(response) {
+			if (response.data && response.data.status == 200) {
+      	self.scores = response.data.data;
+			}
+    });
 	}
 }
+ScoreController.$inject = ['$http'];
 
 export default angular
   .module('app.score.controller', [])
