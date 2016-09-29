@@ -4,18 +4,17 @@ routes.$inject = ['$urlRouterProvider','$stateProvider'];
 
 function routes ($urlRouterProvider, $stateProvider) {
 
-	$stateProvider.state('home', {
-		url: '/home',
-		// template: require('./home.template.html'),
+	$stateProvider.state('score', {
+		url: '/score',
 		templateProvider: ['$q', function ($q) {
 			return $q(function (resolve) {
         require.ensure([], function (require) {
-        	resolve(require('./home.template.html'));
+        	resolve(require('./score.template.html'));
       	});
     	});
 		}],
-		controller: 'HomeController',
-		controllerAs: 'home',
+		controller: 'ScoreController',
+		controllerAs: 'score',
 		resolve: {
 			loadHomeController: ['$q', '$ocLazyLoad', function ($q, $ocLazyLoad) {
 				return $q(function (resolve) {
@@ -27,19 +26,8 @@ function routes ($urlRouterProvider, $stateProvider) {
 				});
 			}]
 		}
-	}).state('home.about', {
-		url: '/about',
-		templateProvider: ['$q', function ($q) {
-			return $q(function (resolve) {
-        require.ensure([], function (require) {
-        	resolve(require('./about/about.template.html'));
-      	});
-    	});
-		}],
-		controller: 'AboutController',
-		controllerAs: 'about'
 	});
 }
 
-export default angular.module('app.home.routes', [])
+export default angular.module('app.score.routes', [])
 	.config(routes);

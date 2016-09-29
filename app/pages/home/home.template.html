@@ -1,5 +1,10 @@
-<div class="jumbotron">
-  <h1>Hello, {{home.name}}</h1>
+<div class="home page-view">
+	<div class="title">班级学生成绩管理</div>
+	<div class="icons">
+		<span class="icon"><a ui-sref="student" ui-sref-active="active">学生管理</a></span>
+		<span class="icon"><a ui-sref="score" ui-sref-active="active">成绩管理</a></span>
+	</div>
+	<p class="info"><a ui-sref="home.about" ui-sref-active="active">关于 home</a></p>
+	
+	<ui-view></ui-view>
 </div>
-
-<button class="btn btn-primary" ng-click="home.changeName()">Change</button>
