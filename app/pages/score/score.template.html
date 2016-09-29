@@ -1,0 +1,28 @@
+<div class="score container-fluid">
+	<h2>成绩列表</h2>
+	<h5 class="info">scores</h5>
+
+	<div class="table-responsive">
+		<table class="table table-striped table-condensed table-bordered">
+			<thead>
+				<tr>
+					<th>序号</th>
+					<th>学生</th>
+					<th>语文</th>
+					<th>数学</th>
+					<th>英语</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="sc in score.scores">
+					<td>{{sc.id}}</td>
+					<td>{{sc.stu.name}}</td>
+					<td>{{sc.language}}</td>
+					<td>{{sc.math}}</td>
+					<td>{{sc.english}}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<a ui-sref="home" ui-sref-active="active">back home</a>
+</div>

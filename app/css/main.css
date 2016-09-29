@@ -1,3 +1,26 @@
-a.active {
-	font-weight: bold;
+* {
+	margin: 0;
+	padding: 0;
+}
+.home {
+	position: relative;
+}
+.home .icons {
+	padding-top: 30px;
+	text-align: center;
+}
+.home .icon {
+	display: inline-block;
+	line-height: 50px;
+	padding: 0 20px;
+	border: solid 1px #333;
+	margin: 10px 30px 0;
+}
+.home .about {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #fff;
 }

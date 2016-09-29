@@ -1,0 +1,10 @@
+{
+	"status": 200,
+	"msg": "",
+	"data": [
+		{"id": 1,"language": 99, "math": 98, "english": 97, "stu": {"name": "赵毅"}},
+		{"id": 2,"language": 99, "math": 98, "english": 97, "stu": {"name": "钱尔"}},
+		{"id": 3,"language": 99, "math": 98, "english": 97, "stu": {"name": "孙散"}},
+		{"id": 4,"language": 99, "math": 98, "english": 97, "stu": {"name": "李斯"}}
+	]
+}

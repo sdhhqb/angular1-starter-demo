@@ -4,7 +4,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var config = {
 	entry: {
-		"vendor": ["angular","angular-ui-router", "oclazyload"],
+		"vendor": ["angular","angular-ui-router", "oclazyload", "bootstrap"],
 		"app": "./app/app.js"
 	},
 	
@@ -26,6 +26,16 @@ var config = {
 				query: {
 					presets: ['es2015']
 				}
+			},
+
+			{
+				test: /\.css$/,
+				loaders: ["style", "css?-minimize"]
+			},
+
+			{
+				test: /\.(png|jpg|woff|woff2|eot|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+				loader: 'url?limit=512&&name=[path][name].[ext]?[hash]'
 			},
 
 			{
